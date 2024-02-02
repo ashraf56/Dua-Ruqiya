@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import SideNav from "./Component/SideNav/SideNav";
+import Category from "./Component/Category/Category";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +14,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <body className={inter.className}>
-        <div>
-          <div>{children}</div>
+        <div className="flex">
+        <SideNav></SideNav>
+        <div className="drawer lg:drawer-open ">
+  <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+  <div className="drawer-content ">
+    {/* Page content here */}
+   
+    <div>{children}</div>
+    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+  
+  </div> 
+  <div className="">
+    <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
+  <Category></Category>
+  
+  </div>
+</div>
         </div>
       </body>
     </html>
