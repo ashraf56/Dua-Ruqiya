@@ -9,13 +9,13 @@ const Category = async () => {
     let allCategory = await getCategory()
   
     return (
-        <div className='w-[300px] h-full '>
+        <div className='w-[300px]  '>
             <div className='bg-green-700 text-white'>Category</div>
             <div>
                 <input type='search' placeholder='search now ' className='w-full border-1' />
 
             </div>
-            <div className='overflow-y-scroll h-5/6 '>
+            <div className=' '>
                 <div className='grid grid-cols-1 gap-3'>
                     {
                         allCategory?.map((all,index) => (
