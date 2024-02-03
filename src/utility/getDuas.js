@@ -1,5 +1,5 @@
 
-const getDuas = async(id) => {
+const getDuas = async (id) => {
     try {
         let res = await fetch(`http://localhost:5000/subcategories/${id}/duas`)
         if (!res.ok) {
