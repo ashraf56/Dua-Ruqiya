@@ -7,7 +7,7 @@ const CategoryCard = ({ all }) => {
     const [subCat, setSubcat] = useState([])
     //get all subcategories 
     useEffect(() => {
-        fetch(`http://localhost:5000/categories/${all.cat_id}/subcategories`)
+        fetch(`https://dua-server.onrender.com/categories/${all.cat_id}/subcategories`)
             .then(res => res.json()).then(data => {
 
                 setSubcat(data)

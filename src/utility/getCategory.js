@@ -1,6 +1,6 @@
 let getCategory = async () => {
     try {
-        let res = await fetch('http://localhost:5000/categories')
+        let res = await fetch('https://dua-server.onrender.com/categories')
         if (!res.ok) {
             throw new Error('erroer')
         }
